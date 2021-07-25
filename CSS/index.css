@@ -1,0 +1,54 @@
+body {
+    margin: 20px 5%;
+}
+
+#logo {
+    box-sizing: border-box;
+    color: white;
+    text-shadow: 5px 5px 10px black;
+    animation: changeColor 10s ease-in-out infinite normal;
+}
+
+#topMenu {
+    text-align: center;
+    margin: 2%;
+    border-bottom: 2px solid gray;
+}
+
+#mainMenu {
+    margin: 2%;
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 25px;
+    border-color: gray;
+    padding: 10px;
+}
+
+#bottomMenu {
+    margin: 2%;
+    text-align: center;
+    list-style: none;
+    border-top: 2px solid gray;
+}
+
+#mainMenu .myImg img {
+    border-radius: 50%;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 10px;
+    margin: 0 5px;
+    border: 1px solid #222;
+}
+
+@keyframes changeColor {
+    from { background-color: rgb(58, 128, 0); }
+    50% { background-color: rgb(121, 163, 121); }
+    to { background-color: rgb(58, 128, 0); }
+}

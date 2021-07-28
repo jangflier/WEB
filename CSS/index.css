@@ -27,7 +27,7 @@
     box-shadow: 5px 5px 5px 5px orange;
     border-radius: 50px;
     /* container요소를 숨기고 있다가 마우스 커서가 container위에 hover하게 되면 투명도를 1로 바꿈 */
-    opacity: 0.2;
+    opacity: 0.1;
     transition: 2s ease-in-out;
     /* --------------------------------------------------------------------------------------- */
 }

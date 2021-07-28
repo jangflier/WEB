@@ -1,90 +1,90 @@
+/* 바탕화면 영역 */
 #background {
     margin: 0px;
     padding: 0px;
-    background-image: url("../Images/backgorundImg.jpg");
-    background-size: cover;
+    position: relative;
+    background-color: black;
 }
 
+#videoBackground {
+    position: fixed;
+}
+/* ------------- */
+
+
+/* header, main, footer를 포함하는 요소 */
 #container {
-    margin: 5% auto;
-    display: grid;
-    grid-gap: 10px;
-    width: 1024px;
+    /* 배경을 기준으로 가로, 세로 가운데 정렬을 하기 위한 값 */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -600px;
+    margin-top: -400px;
+    width: 1200px;
     height: 800px;
-    border: 1px solid black;
+    /* --------------------------------------------------- */
+    display: grid;
+    box-shadow: 5px 5px 5px 5px orange;
+    border-radius: 50px;
 }
+/* ------------------------------------ */
 
+
+/* top, main, bottom */
 .topMenu {
     border: 1px solid black;
-    grid-area: topBox;
-    grid-column: 1/16;
-    grid-row: 1/1;
-}
-
-.sideMenu {
-    border: 1px solid black;
-    background-color: white;
-    grid-area: sideBox;
-    grid-column: 1/2;
-    grid-row: 2/15;
+    background-color: gray;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    width: auto;
+    height: 150px;
+    box-shadow: 5px 5px 5px 5px orange;
 }
 
 .mainMenu {
-    border: 1px solid black;
-    background-color: white;
-    grid-area: mainBox;
-    grid-column: 2/16;
-    grid-row: 2/15;
+    width: auto;
+    height: 500px;
+    margin: auto;
 }
 
 .bottomMenu {
-    border: 1px solid black;
-    grid-area: bottomBox;
-    grid-column: 1/16;
-    grid-row: 15/16;
+    width: auto;
+    margin: auto;
 }
+/* ------------------- */
 
-@media screen and (max-device-width: 812px) and (orientation: landscape) {
-    #background {
-        margin: 0px;
-        padding: 0px;
-    }
-    
-    #container {
-        margin: 5% auto;
-        display: grid;
-        grid-gap: 10px;
-        width: 1024px;
-        height: 800px;
-        border: 1px solid black;
-    }
-    
-    .topMenu {
-        background-color: greenyellow;
-        grid-area: topBox;
-        grid-column: 1/16;
-        grid-row: 1/2;
-    }
-    
-    .sideMenu {
-        background-color: grey;
-        grid-area: sideBox;
-        grid-column: 1/16;
-        grid-row: 2/3;
-    }
-    
-    .mainMenu {
-        background-color: hotpink;
-        grid-area: mainBox;
-        grid-column: 1/16;
-        grid-row: 3/4;
-    }
-    
-    .bottomMenu {
-        background-color: gold;
-        grid-area: bottomBox;
-        grid-column: 1/16;
-        grid-row: 4/5;
-    }
-    
+
+/* 제목 태그 CSS */
+.topMenu > h1 {
+    color: moccasin;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 50px;
+    letter-spacing: 10px;
 }
+.mainMenu > h1 {
+    text-align: center;
+    color: moccasin;
+    border: 3px solid white;
+}
+.mainMenu > h2 {
+    color: white;
+}
+/* -------------- */
+
+
+/* 모든 요소에 테투리까지 포함해서 너빗값을 지정 */
+* {
+    box-sizing: border-box;
+}
+/* ------------------------------------------- */
+
+
+/* 웹 아이콘 CSS */
+.bottomMenu a {
+    font-size: 50px;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+}
+/* ------------- */

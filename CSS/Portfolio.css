@@ -83,16 +83,24 @@
     color: moccasin;
     border: 3px solid white;
     transition: 2s ease-in;
-    text-shadow: 2px 2px 3px white;
+    text-shadow: 2px 2px 3px black;
     text-transform: uppercase;
-    padding: 10px;
     font-size: 35px;
+    border-radius: 10px;
+    padding: 20px;
 }
-.mainMenu > h2 {
-    color: white;
-    text-align: center;
-}
+
 /* -------------- */
+
+/* 웹 아이콘 CSS */
+.bottomMenu a {
+    font-size: 50px;
+    color: white;
+    text-shadow: 5px 5px 5px black;
+    margin: 10px;
+    padding: 10px;
+}
+/* ------------- */
 
 
 /* 모든 요소에 테투리까지 포함해서 너빗값을 지정 및 리스트스타일 none */
@@ -105,15 +113,7 @@
 /* --------------------------------------------------------------- */
 
 
-/* 웹 아이콘 CSS */
-.bottomMenu a {
-    font-size: 50px;
-    color: white;
-    text-shadow: 5px 5px 5px black;
-    margin: 10px;
-    padding: 10px;
-}
-/* ------------- */
+
 
 @keyframes rotate {
     from { transform: rotateX(0deg); }

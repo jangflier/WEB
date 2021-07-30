@@ -1,57 +1,133 @@
-body {
-    margin: 20px 5%;
+/* 바탕화면 영역 */
+#background {
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+    position: relative;
 }
 
-#logo {
-    box-sizing: border-box;
-    color: white;
-    text-shadow: 5px 5px 10px black;
-    animation: changeColor 10s ease-in-out infinite normal;
+.videoBackground{
+    position: fixed;
 }
+/* ------------- */
 
-#topMenu {
-    text-align: center;
-    margin: 2%;
-    border-bottom: 2px solid gray;
-}
 
-#mainMenu {
+/* header, main, footer를 포함하는 container 요소 */
+#container {
+    /* 배경을 기준으로 가로, 세로 가운데 정렬을 하기 위한 값 */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -600px;
+    margin-top: -400px;
+    width: 1200px;
+    height: 800px;
+    /* --------------------------------------------------- */
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    margin: 2%;
-    box-sizing: border-box;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 25px;
-    border-color: gray;
-    padding: 10px;
+    box-shadow: 5px 5px 5px 7px orange;
+    border-radius: 50px;
+    /* container요소를 숨기고 있다가 마우스 커서가 container위에 hover하게 되면 투명도를 1로 바꿈 */
+    opacity: 0.1;
+    transition: 2s ease-in-out;
+    /* --------------------------------------------------------------------------------------- */
+}
+/* ----------------------------------- *?
+
+
+/* 커서가 contatiner에 hover하게 되면 투명도를 1로 바꿈 */
+#container:hover {
+    opacity: 1;
+}
+/* ------------------------------------ */
+
+
+/* top, main, bottom */
+.topMenu {
+    border: 1px solid black;
+    background-color: rgb(78, 78, 78);
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    width: 100%;
+    height: 150px;
+    box-shadow: 5px 5px 5px 5px orange;
 }
 
-#bottomMenu {
-    margin: 2%;
+.mainMenu {
+    width: 100%;
+    height: 500px;
+    margin: 0;
     text-align: center;
-    list-style: none;
-    border-top: 2px solid gray;
+    overflow-y:scroll;
 }
 
-#mainMenu .myImg img {
-    border-radius: 50%;
+.bottomMenu {
+    width: auto;
+    height: 80px;
+    margin: auto;
+}
+/* ------------------- */
+
+
+/* 제목 태그 CSS */
+.topMenu > h1 {
+    color: moccasin;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 50px;
+    letter-spacing: 10px;
+    text-shadow: 5px 5px 5px black;
+    animation: rotate 5s ease-in-out infinite;
 }
 
-nav ul {
-    list-style: none;
-}
-
-nav ul li {
+.mainMenu ul li h2 {
+    border: 3px solid white;
     display: inline-block;
     padding: 10px;
-    margin: 0 5px;
-    border: 1px solid #222;
+    border-radius: 10px;
 }
 
-@keyframes changeColor {
-    from { background-color: rgb(58, 128, 0); }
-    50% { background-color: rgb(121, 163, 121); }
-    to { background-color: rgb(58, 128, 0); }
+.mainMenu:nth-child(2) {
+    font-size: 30px;
+    color: white;
+    text-shadow: 5px 5px 5px black;
+}
+
+.mainMenu:nth-child(3) {
+
+}
+
+.mainMenu img {
+    border-radius: 50%;
+    box-shadow: 5PX 5PX 5PX white;
+    margin: 20px;
+}
+
+/* -------------- */
+
+
+/* 모든 요소에 테투리까지 포함해서 너빗값을 지정 및 리스트스타일 none */
+* {
+    box-sizing: border-box;
+}
+* ul {
+    list-style-type: none;
+}
+/* --------------------------------------------------------------- */
+
+
+
+/* 웹 아이콘 CSS */
+.bottomMenu a {
+    font-size: 50px;
+    color: white;
+    text-shadow: 5px 5px 5px black;
+    margin: 10px;
+    padding: 10px;
+}
+/* ------------- */
+
+@keyframes rotate {
+    from { transform: rotateX(0deg); }
+    50% { transform: rotateX(360deg); }
+    to { transform: rotateX(0deg); }
 }

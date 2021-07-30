@@ -1,45 +1,41 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Yunseok Jang">
-    <link rel="stylesheet" href="css/aboutMe.css">
+    <link rel="stylesheet" href='CSS/aboutMe.css'>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="JavaScript/index.js"></script>
     <title>Wellcome</title>
 </head>
+<body id="background">
+    <section id="videoBackgorund">
+        <video src="Images/Octagon - 5192.mp4" width="100%" muted autoplay loop></video>    
+    </section>
+    
+    <section id="container">
+            <header class="topMenu">
+                <h1>About Me</h1>
+            </header>
+            
 
-<body>
-    <header id="topMenu">
-        <nav id="logo">
-            <a href="index.html">
-                <h1>Yunseok Jang</h1>
-            </a>
-        </nav>
-        <nav>
-            <ul>
-                <li><a href="aboutMe.html">About me</a></li>
-                <li><a href="Portfolio.html">Portfolio</a></li>
-            </ul>
-        </nav>
-    </header>
+            <main class="mainMenu">
+                <ul>
+                    <li><img src="Images/myImg.jpg" width="50%" alt="My Image"></li>
+                    <li><h2>INTRODUTION</h2><br>이름(NAME) : 장윤석(Yunseok Jang)<br>현재 목표(CURRENT GOAL) : 백엔드 개발자(BACK-END ENGINEER)</bt></li>
+                    <li><h2>SKILLS</h2><br>내용</li>
+                </ul>
+            </main>
 
-    <main id="mainMenu">
-        <section class="myImg">
-            <img src="Images/myImg.jpg" alt="myimage" width="100%" height="100%">
-        </section>
-        <section>
-            <h2>이름 : 장윤석</h2>
-        </section>
-    </main>
-
-    <footer id="bottomMenu">
-        <nav>
-            <ul>
-                <li><a href="">Hello</a></li>
-                <li><a href="">Hello</a></li>
-            </ul>
-        </nav>
-    </footer>
+        <footer class="bottomMenu">
+            <a href="index.html"><i class="fas fa-home"></i></a>
+            <a href="aboutMe.html"><i class="fas fa-id-card"></i></a>
+            <a href="portfolio.html"><i class="fas fa-book"></i></a>
+            <a href="contactMe.html"><i class="fas fa-at"></i></a>
+            <a href="https://github.com/jangflier?tab=repositories" target="_blank"><i class="fab fa-github-square"></i></a>
+        </footer>
+    </section>
 </body>
 </html>

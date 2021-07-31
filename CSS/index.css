@@ -148,7 +148,6 @@
 
     .mainMenu {
         width: 100%;
-        padding: 80px;
         text-align: center;
     }
 
@@ -157,7 +156,7 @@
         bottom: 0;
         left: 0;
         right: 0;
-        padding: 10px;
+        padding: 5px;
     }
 
     /* bottom메뉴 아이콘 */

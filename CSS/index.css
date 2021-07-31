@@ -1,3 +1,4 @@
+/* 화면 너비가 1250px이상이 되면 실행 */
 @media screen and (min-width: 1250px)
 {
     /* 모든 요소에 테투리까지 포함해서 너빗값을 지정 및 리스트스타일 none */
@@ -118,6 +119,7 @@
 }
 
 
+/* 화면 너비가 1250px미만이 되면 실행 */
 @media screen and (max-width: 1250px) {
     * {
         box-sizing: border-box;
@@ -128,9 +130,8 @@
     }
 
     body {
-        margin: 0;
-        padding: 0;
-    }  
+        background-color: #FFFF96;
+    }
 
     #container {
         top: 0;
@@ -144,6 +145,8 @@
         border: 1px solid black;
         background-color: rgb(78, 78, 78);
         width: 100%;
+        border-bottom-left-radius: 5vw;
+        border-bottom-right-radius: 5vw;
     }
 
     .mainMenu {
@@ -151,12 +154,25 @@
         text-align: center;
     }
 
+    .topMenu h1 {
+        font-size: 20vw;
+        color: aliceblue;
+        text-shadow: 1vw 1vw 1vw black;
+        animation: rotate 3s ease-in-out infinite;
+    }
+
+    .mainMenu h1 {
+        display: inline-block;
+        padding: 5vw;
+        border: 1px solid black;
+        border-radius: 1vw;
+    }
+
     .bottomMenu {
         position: fixed;
+        font-size: 5vw;
         bottom: 0;
-        left: 0;
-        right: 0;
-        padding: 5px;
+        padding: 1vw;
     }
 
     /* bottom메뉴 아이콘 */
@@ -169,4 +185,9 @@
     }
     /* ------------- */
 
+    @keyframes rotate {
+        from { transform: rotateX(0deg); }
+        50% { transform: rotateX(180deg); }
+        to { transform: rotateX(360deg); }
+    }
 }

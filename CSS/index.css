@@ -1,122 +1,173 @@
-/* 바탕화면 영역 */
-#background {
-    margin: 0px;
-    padding: 0px;
-    background-color: black;
-    position: relative;
+@media screen and (min-width: 1250px)
+{
+    /* 모든 요소에 테투리까지 포함해서 너빗값을 지정 및 리스트스타일 none */
+    * {
+        box-sizing: border-box;
+    }
+    * ul {
+        list-style-type: none;
+    }
+    /* --------------------------------------------------------------- */
+
+
+    /* 바탕화면 영역 */
+    body {
+        margin: 0px;
+        padding: 0px;
+        background-color: black;
+        position: relative;
+    }
+    /* ------------- */
+
+
+    /* header, main, footer를 포함하는 container 요소 */
+    #container {
+        /* 배경을 기준으로 가로, 세로 가운데 정렬을 하기 위한 값 */
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -600px;
+        margin-top: -400px;
+        width: 1200px;
+        height: 800px;
+        /* --------------------------------------------------- */
+        box-shadow: 5px 5px 5px 7px orange;
+        border-radius: 50px;
+        /* container요소를 숨기고 있다가 마우스 커서가 container위에 hover하게 되면 투명도를 1로 바꿈 */
+        opacity: 0.1;
+        transition: 2s ease-in-out;
+        /* --------------------------------------------------------------------------------------- */
+    }
+    /* ----------------------------------- *?
+
+
+    /* 커서가 contatiner에 hover하게 되면 투명도를 1로 바꿈 */
+    #container:hover {
+        opacity: 1;
+    }
+    /* -------------------------------------------------- */
+
+
+    /* top, main, bottom */
+    .topMenu {
+        border: 1px solid black;
+        background-color: rgb(78, 78, 78);
+        border-top-right-radius: 50px;
+        border-top-left-radius: 50px;
+        width: 100%;
+        height: 150px;
+        box-shadow: 5px 5px 5px 5px orange;
+    }
+    .mainMenu {
+        width: 100%;
+        height: 550px;
+        padding: 80px;
+        text-align: center;
+    }
+    .bottomMenu {
+        height: 100px;
+        padding: 10px;
+        text-align: center;
+    }
+    /* ------------------- */
+
+
+    /* 제목 태그 */
+    .topMenu > h1 {
+        color: moccasin;
+        text-align: center;
+        font-weight: bolder;
+        font-size: 50px;
+        letter-spacing: 10px;
+        text-shadow: 5px 5px 5px black;
+        animation: rotate 5s ease-in-out infinite;
+    }
+    .mainMenu > h1 {
+        display: inline-block;
+        text-align: center;
+        color: moccasin;
+        border: 3px solid white;
+        transition: 2s ease-in;
+        text-shadow: 2px 2px 3px white;
+        text-transform: uppercase;
+        padding: 10px;
+        font-size: 35px;
+    }
+    .mainMenu > h2 {
+        color: white;
+        text-align: center;
+    }
+    /* -------------- */
+
+
+    /* bottom 아이콘 */
+    .bottomMenu a {
+        font-size: 50px;
+        color: white;
+        text-shadow: 5px 5px 5px black;
+        margin: 10px;
+        padding: 10px;
+    }
+    /* ------------- */
+
+    @keyframes rotate {
+        from { transform: rotateX(0deg); }
+        50% { transform: rotateX(360deg); }
+        to { transform: rotateX(0deg); }
+    }
 }
 
-.videoBackground{
-    position: fixed;
-}
-/* ------------- */
 
+@media screen and (max-width: 1250px) {
+    * {
+        box-sizing: border-box;
+    }
 
-/* header, main, footer를 포함하는 container 요소 */
-#container {
-    /* 배경을 기준으로 가로, 세로 가운데 정렬을 하기 위한 값 */
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -600px;
-    margin-top: -400px;
-    width: 1200px;
-    height: 800px;
-    /* --------------------------------------------------- */
-    display: grid;
-    box-shadow: 5px 5px 5px 7px orange;
-    border-radius: 50px;
-    /* container요소를 숨기고 있다가 마우스 커서가 container위에 hover하게 되면 투명도를 1로 바꿈 */
-    opacity: 0.1;
-    transition: 2s ease-in-out;
-    /* --------------------------------------------------------------------------------------- */
-}
-/* ----------------------------------- *?
+    .videoBackground video {
+        display: none;
+    }
 
+    body {
+        margin: 0;
+        padding: 0;
+    }  
 
-/* 커서가 contatiner에 hover하게 되면 투명도를 1로 바꿈 */
-#container:hover {
-    opacity: 1;
-}
-/* ------------------------------------ */
+    #container {
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
 
+    .topMenu {
+        border: 1px solid black;
+        background-color: rgb(78, 78, 78);
+        width: 100%;
+    }
 
-/* top, main, bottom */
-.topMenu {
-    border: 1px solid black;
-    background-color: rgb(78, 78, 78);
-    border-top-right-radius: 50px;
-    border-top-left-radius: 50px;
-    width: 100%;
-    height: 150px;
-    box-shadow: 5px 5px 5px 5px orange;
-}
+    .mainMenu {
+        width: 100%;
+        padding: 80px;
+        text-align: center;
+    }
 
-.mainMenu {
-    width: 100%;
-    height: 500px;
-    margin: 0;
-    text-align: center;
-}
+    .bottomMenu {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 10px;
+    }
 
-.bottomMenu {
-    width: auto;
-    height: 80px;
-    margin: auto;
-}
-/* ------------------- */
+    /* bottom메뉴 아이콘 */
+    .bottomMenu a {
+        font-size: 7vw;
+        color: black;
+        text-shadow: 5px 5px 5px gray;
+        margin: 10px;
+        padding: 10px;
+    }
+    /* ------------- */
 
-
-/* 제목 태그 CSS */
-.topMenu > h1 {
-    color: moccasin;
-    text-align: center;
-    font-weight: bolder;
-    font-size: 50px;
-    letter-spacing: 10px;
-    text-shadow: 5px 5px 5px black;
-    animation: rotate 5s ease-in-out infinite;
-}
-.mainMenu > h1 {
-    display: inline-block;
-    text-align: center;
-    color: moccasin;
-    border: 3px solid white;
-    transition: 2s ease-in;
-    text-shadow: 2px 2px 3px white;
-    text-transform: uppercase;
-    padding: 10px;
-    font-size: 35px;
-}
-.mainMenu > h2 {
-    color: white;
-    text-align: center;
-}
-/* -------------- */
-
-
-/* 모든 요소에 테투리까지 포함해서 너빗값을 지정 및 리스트스타일 none */
-* {
-    box-sizing: border-box;
-}
-* ul {
-    list-style-type: none;
-}
-/* --------------------------------------------------------------- */
-
-
-/* 웹 아이콘 CSS */
-.bottomMenu a {
-    font-size: 50px;
-    color: white;
-    text-shadow: 5px 5px 5px black;
-    margin: 10px;
-    padding: 10px;
-}
-/* ------------- */
-
-@keyframes rotate {
-    from { transform: rotateX(0deg); }
-    50% { transform: rotateX(360deg); }
-    to { transform: rotateX(0deg); }
 }

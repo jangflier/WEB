@@ -8,32 +8,85 @@
     <link rel="stylesheet" href='CSS/index.css'>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <script src="JavaScript/index.js"></script>
-    <title>Wellcome</title>
+    <title>Yunseok Jang</title>
 </head>
 <body onabort="alert('문서를 불러오는데 실패했습니다!')">
-    <section id="background" >
-        <video src="Images/Octagon - 5192.mp4" width="100%" muted autoplay loop></video>
-    </section>
-    
-    
-    <section id="container">
-        <header class="topMenu">
-            <h1>HOME</h1>
+        <header>
+            <div id="logo">
+                <h1>Yunseok Jang</h1>
+            </div>
+            <nav id="linkMenu">
+                <a href="#logo"><i class="fas fa-home"></i></a>
+                <a href="#slide2"><i class="fas fa-id-card"></i></a>
+                <a href="#slide3"><i class="fas fa-book"></i></a>
+                <a href="#slide4"><i class="fas fa-at"></i></a>
+                <a href="https://github.com/jangflier?tab=repositories" target="_blank"><i class="fab fa-github-square"></i></a>
+            </nav>
         </header>
-        
-        <main class="mainMenu">
-            <h1>Wellcome to<br> my<br> web page</h1>
-            <h2>Thank you so much for visiting</h2>
-            <h2>but 공사중 (^o^)</h2>
+
+        <div id="backgroundVideo">
+            <video src="Images/Ocean.mp4" width="100%" muted autoplay loop></video>
+        </div>
+
+        <main>
+            <section class="index">
+                <h1>HOME</h1>
+                <article>
+                    <p>Thank you so much for visiting</p>
+                    <p>지속적으로 업데이트 될 예정입니다!</p>
+                </article>
+            </section>
+            <section class="aboutMe" id="slide2">
+                <h1>About Me</h1>
+                <div><img src="Images/myImg.jpg" width="35%" alt="My Image"></div>
+                <div>
+                    <span style="font-size: 2.5vw;font-weight: bold; color:rgb(53, 94, 94); text-shadow: 0.1vw 0.1vw 0.3vw rgb(33, 42, 56);">장윤석(Yunseok Jang)</span><br>
+                    <br>안녕하십니까?!
+                    <br><span style="font-size: 2.5vw; font-weight: bold; color:rgb(53, 94, 94);">백엔드 개발자</span>를 꿈꾸고 있는 <span style="font-size: 2.5vw; font-weight: bold; color:rgb(53, 94, 94);">장윤석</span>이라고 합니다.<br>
+                    <br>저는 프로그래밍 공부를 2021년 1월에 처음 시작해 지금까지 달려왔습니다. <i class="fas fa-baby" id="fasFaBaby"></i><br>
+                    비록 시작은 늦었지만 끊임없이 배우고 노력해서<br><span style="font-size: 2.5vw; font-weight: bold; color:rgb(53, 94, 94);">실력을 인정받는 개발자</span>가 될 것입니다! <i class="fas fa-burn" id="fasFaBurn"></i>
+                </div>
+                <div>
+                    <h2>HOBBY</h2>
+                    <div id="myHobby">
+                        <div>#독서</div>
+                        <div>#그림 그리기</div>
+                        <div>#게임</div>
+                        <div>#음악 듣기</div>
+                        <div>#클래식 음악</div>
+                        <div>#팝송</div>
+                        <div>#유튜브로 피아노 연주 감상</div>
+                        <div>취업 ToT</div>
+                    </div>
+                </div>
+                <div>
+                    <h2>SKILLS</h2>
+                    <div id="skills">
+                        <div>C</div>
+                        <div>C++</div>
+                        <div>HTML</div>
+                        <div>CSS</div>
+                        <div>JavaScript</div>
+                    </div>
+                </div>
+            </section>
+            <section class="portfolio">
+                <h1 id="slide3">Portfolio</h1>
+                <a href="https://github.com/jangflier/Portfolio" target="_blank"><h2>C/C++ PORTFOLIO</h2></a>
+                <a href="https://github.com/jangflier/WEB" target="_blank"><h2>WEB SOURCE CODE</h2></a>
+                <p>cf. Git Hub 페이지로 연결됩니다.</p>
+            </section>
+            <section class="contactMe">
+                <h1 id="slide4">Contact Me</h1>
+                <h2><i class="fas fa-envelope"></i> E-MAIL</h2>
+                <p>dbstjr3805@gmail.com</p>
+                <p><br>이메일로 연락 주시면 빠른 시일 내에 답변해드릴 수 있습니다.</p>
+            </section>
         </main>
 
-        <footer class="bottomMenu">
-            <a href="index.html"><i class="fas fa-home"></i></a>
-            <a href="aboutMe.html"><i class="fas fa-id-card"></i></a>
-            <a href="portfolio.html"><i class="fas fa-book"></i></a>
-            <a href="contactMe.html"><i class="fas fa-at"></i></a>
-            <a href="https://github.com/jangflier?tab=repositories" target="_blank"><i class="fab fa-github-square"></i></a>
+        <footer>
+            <p>Made by Yunseok Jang</p>
+            <p><i class="fas fa-copyright" style="font-size: 0.8vw;"></i> 2021 YunseokJang All rights Reserved.</p>
         </footer>
-    </section>
 </body>
 </html>

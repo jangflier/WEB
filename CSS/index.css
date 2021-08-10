@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Song+Myung&family=Stylish&display=swap');/* 구글 폰트 사용 */
-/* 화면 너비가 1250px이상이 되면 실행 */
-@media screen and (min-width: 1250px) and (orientation: landscape)
+/* 화면 너비가 1024px이상이 되면 실행 */
+@media screen and (min-width: 1024px) and (orientation: landscape)
 {
 /* 공통된 영역 시작 */
     * {
@@ -65,9 +65,9 @@
         font-size: 6vh;
     }
     #linkMenu > a {
-        color: rgba(30, 30, 30, 0.9);
+        color: rgba(30, 30, 30, 0.8);
         margin-left: 5vw;
-        text-shadow: 0.2vw 0.2vw 0.5vw rgba(230, 236, 236, 0.9);
+        text-shadow: 0.1vw 0.1vw 0.3vw rgba(192, 235, 235, 0.8);
     }
     #linkMenu > a > i:hover {
         color: black;
@@ -81,6 +81,7 @@
     main {
         clear: both;
         padding: 5vh 5vw;
+        background-color: white;
     }
 
     /* index 페이지 */
@@ -97,7 +98,7 @@
         text-align: center;
         margin: 35vh 10vw 5vh 10vw;
         font-size: 10vw;
-        animation: changeScale 3s;
+        animation: changeScale 5s;
     }
     .index > article > p:first-child {
         padding-bottom: 3vh;
@@ -133,11 +134,12 @@
         margin-left: 5vw;
         border-radius: 50%;
         float: left;
-        box-shadow: 0.2vw 0.2vw 0.3vw black;
+        box-shadow: 0.2vw 0.2vw 0.2vw black;
         transition: 1s ease-in-out;
     }
     .aboutMe > div:nth-of-type(1) > img:hover {
-        transform: scale(1.5);
+        transform: scale(1.7);
+        box-shadow: 1.5vw 1.5vw 1vw black;
     }
     .aboutMe > div:nth-of-type(2) { /* 자기소개 영역 */
         display: inline-block;
@@ -206,6 +208,7 @@
         color: darksalmon;
         font-size: 2vw;
         animation: rotate 3s infinite;
+        text-shadow: 0.1vw 0.1vw 0.1vw black;
     }
     #fasFaBurn {
         color: red;
@@ -269,6 +272,7 @@
     }
     .contactMe > h2:hover {
         transform: scale(0.8);
+        box-shadow: 0.5vw 0.5vw 0.2vw black;
     }
     .contactMe > p {
         text-align: center;
@@ -305,9 +309,12 @@
     }
 /* 푸터 영역 끝 */
 
+
+/* 애니메이션 효과 영역 시작 */
     @keyframes changeScale { /* 기본 크기의 5배에서 시작해 본래 크기로 돌아오는 효과 */
-        from {transform: scale(5);}
-        to {transform: scale(1);}
+        0% {transform: scale(10);}
+        75% {transform: scale(0.1);}
+        100% {transform: scale(1);}
     }
 
     @keyframes hobbyScale { /* 취미 탭에서 사용할 효과 */
@@ -329,13 +336,14 @@
         75% {transform: scale(0.9) skew(-5deg,-10deg); color: orangered;}
         to {transform: scale(1) skew(0deg,0deg);color: red;}
     }
+    /* 애니메이션 효과 영역 끝 */
 }
 
 
 /* --------------------------------- */
-/* 화면 너비가 1250px미만이 되면 실행 */
+/* 화면 너비가 1024px미만이 되면 실행 */
 /* --------------------------------- */
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1024px) {
     * {
         box-sizing: border-box;
     }

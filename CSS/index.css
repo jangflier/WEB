@@ -17,6 +17,10 @@
     a {
         text-decoration: none;
     }
+
+    :root { /* 가상클래스로 자주 사용하는 외우기 어려운 컬러를 이름을 지정하여 사용 */
+        --borderTopBottom-color : rgb(32, 32, 32);
+    }
 /* 공통된 영역 끝 */
 
 
@@ -123,7 +127,7 @@
         text-align: center;
         font-family: Times;
         font-size: 10vw;
-        border-bottom: 0.1vh solid rgb(32, 32, 32);
+        border-bottom: 0.1vh solid var(--borderTopBottom-color);
     }
     .aboutMe > div:nth-of-type(1) > img { /* 이미지 조정 */
         margin-left: 5vw;
@@ -149,14 +153,14 @@
         text-align: center;
         font-family: TImes;
         font-size: 5vw;
-        border-bottom: 0.1vh solid rgb(32, 32, 32);
+        border-bottom: 0.1vh solid var(--borderTopBottom-color);
     }
     .aboutMe > div:nth-of-type(4) > h2 { /* Skills 제목 */
         margin: 10vw 20vw 5vw 20vw;
         text-align: center;
         font-family: TImes;
         font-size: 5vw;
-        border-bottom: 0.1vh solid rgb(32, 32, 32);
+        border-bottom: 0.1vh solid var(--borderTopBottom-color);
     }
     #myHobby {
         margin: 0 5vw;
@@ -220,7 +224,7 @@
         text-align: center;
         font-family: Times;
         font-size: 10vw;
-        border-bottom: 0.1vh solid rgb(32, 32, 32);
+        border-bottom: 0.1vh solid var(--borderTopBottom-color);
     }
     .portfolio > a {
         text-decoration: none;
@@ -252,7 +256,7 @@
         text-align: center;
         font-family: Times;
         font-size: 10vw;
-        border-bottom: 0.1vh solid rgb(32, 32, 32);
+        border-bottom: 0.1vh solid var(--borderTopBottom-color);
     }
     .contactMe > h2 {
         margin: 0 22vw;
@@ -290,7 +294,7 @@
         padding: 5vw;
         text-align: center;
         font-size: 2vw;
-        border-top: 0.1vh solid rgb(32, 32, 32);
+        border-top: 0.1vh solid var(--borderTopBottom-color);
     }
     footer > p:nth-child(1) {
         font-weight: 900;
@@ -306,10 +310,10 @@
         to {transform: scale(1);}
     }
 
-    @keyframes hobbyScale {
-        from {transform: scale(1);}
-        50% {transform: scale(0.8);}
-        to {transform: scale(1);}
+    @keyframes hobbyScale { /* 취미 탭에서 사용할 효과 */
+        from {transform: scale(1); box-shadow: 1vw 1vw 0.5vw black;}
+        50% {transform: scale(0.8); box-shadow: 0.5vw 0.5vw 0.2vw black;}
+        to {transform: scale(1); box-shadow: 1vw 1vw 0.5vw black;}
     }
 
     @keyframes rotate { /* fas-fa-baby 아이콘 회전 효과 */

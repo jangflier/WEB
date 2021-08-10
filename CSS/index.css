@@ -20,6 +20,7 @@
 
     :root { /* 가상클래스로 자주 사용하는 외우기 어려운 컬러를 이름을 지정하여 사용 */
         --borderTopBottom-color : rgb(32, 32, 32);
+        --boxShade : rgb(0, 0, 0, 0.1); /* 종이 질감처럼 보이기 위해 음영 처리 용도 */
     }
 /* 공통된 영역 끝 */
 
@@ -119,6 +120,7 @@
     /* aboutMe 페이지 */
     .aboutMe {
         background-color: rgb(226, 226, 226);
+        box-shadow: inset -3vh -3vw 0.5vw var(--boxShade);
         margin-top: 20vh;
         margin-bottom: 20vh;
         padding-bottom: 20vh;
@@ -172,7 +174,7 @@
         margin: 1vw;
         padding: 1vw;
         font-size: 3vw;
-        border: 1px solid black;
+        border: 0.1vw solid black;
         border-radius: 2vw;
         box-shadow: 1vw 1vw 0.5vw black;
     }
@@ -219,6 +221,7 @@
     /* portfolio 페이지 */
     .portfolio {
         background-color: cadetblue;
+        box-shadow: inset -2vh -2vw 0.5vw var(--boxShade);
         height: 100vh;
         margin-bottom: 20vh;
     }
@@ -251,6 +254,7 @@
     /* contactMe 페이지 */
     .contactMe {
         background-color: rgba(129, 201, 202, 0.637);
+        box-shadow: inset -2vh -2vw 0.5vw var(--boxShade);
         height: 100vh;
         margin-bottom: 20vh;
     }
@@ -266,7 +270,7 @@
         text-align: center;
         font-size: 8vw;
         border-radius: 3vw;
-        border: 1px solid white;
+        border: 0.1vw solid rgba(255, 255, 255, 0.8);
         box-shadow: 1vw 1vw 0.5vw black;
         transition: 1s ease-in;
     }
@@ -280,8 +284,9 @@
         font-weight: bold;
     }
     .contactMe > p:first-of-type {
+        padding: 1vw;
         color:teal;
-        text-shadow: 1vw 1vw 1.5vw black;
+        text-shadow: 1px 1px 1px black;
     }
     .contactMe > p:last-child {
         font-size: 3vw;

@@ -191,10 +191,6 @@
     #myHobby div:nth-child(7) {
         animation: hobbyScale 3s infinite 0s;
     }
-    #myHobby div:nth-child(8) {
-        font-size: 0.1vw;
-        animation: hobbyScale 3s infinite 0s;
-    }
     #skills {
         width: 12.5vw;
         margin: 5vh 10vw;

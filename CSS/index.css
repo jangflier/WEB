@@ -153,15 +153,19 @@
         font-weight: 550;
         font-family: 'Song Myung', serif;
     }
+    .aboutMe > div:nth-of-type(2) span { /* 자기소개 영역에서 이름 */
+        font-size: 2.5vw;
+        font-weight: bold;
+        color:rgb(53, 94, 94);
+    }
+    .aboutMe > div:nth-of-type(2) > span:nth-of-type(1) { /* 자기소개 영역에서 강조 */
+        font-size: 3vw;
+        font-weight: bold;
+        color:rgb(53, 94, 94);
+        text-shadow: 0.1vw 0.1vw 0.3vw rgb(33, 42, 56);
+    }
     .aboutMe > div:nth-of-type(3) > h2 { /* Hobby 제목 */
         clear: both;
-        margin: 10vw 20vw 5vw 20vw;
-        text-align: center;
-        font-family: TImes;
-        font-size: 5vw;
-        border-bottom: 0.1vh solid var(--borderTopBottom-color);
-    }
-    .aboutMe > div:nth-of-type(4) > h2 { /* Skills 제목 */
         margin: 10vw 20vw 5vw 20vw;
         text-align: center;
         font-family: TImes;
@@ -201,12 +205,21 @@
     #myHobby div:nth-child(7) {
         animation: hobbyScale 3s infinite 0s;
     }
+    .aboutMe > div:nth-of-type(4) > h2 { /* Skills 제목 */
+        margin: 10vw 20vw 5vw 20vw;
+        text-align: center;
+        font-family: TImes;
+        font-size: 5vw;
+        border-bottom: 0.1vh solid var(--borderTopBottom-color);
+    }    
     #skills {
         width: 12.5vw;
         margin: 5vh 10vw;
-        font-size: 2vw;
+        font-size: 3vw;
         font-family: Georgia;
+        font-weight: bold;
         transition: 3s ease-in-out;
+        text-shadow: 0.3vw 0.3vw 0.1vw white;
     }
     #fasFaBaby {
         color: darksalmon;
@@ -477,15 +490,16 @@
         margin: 10vw;
         text-align: center;
         font-family: Times;
-        font-size: 15vw;
+        font-size: 16vw;
         border-bottom: 0.1vh solid var(--borderTopBottom-color);
     }
     #imagePosition {
         text-align: center;
     }
     .aboutMe > div:nth-of-type(1) > img { /* 이미지 조정 */
-        width: 60%;
+        width: 90%;
         border-radius: 50%;
+        border: 5px solid black;
         box-shadow: 0.2vw 0.2vw 0.2vw black;
         transition: 0.5s ease-in-out;
     }
@@ -494,37 +508,45 @@
         box-shadow: 1.5vw 1.5vw 1vw black;
     }
     .aboutMe > div:nth-of-type(2) { /* 자기소개 영역 */
-        width: 70%;
+        width: 90%;
         margin-left: 5vw;
-        font-size: 2vw;
+        margin-bottom: 5vh;
+        font-size: 5vw;
         font-weight: 550;
         font-family: 'Song Myung', serif;
+    }
+    #hobbySection { /* Hobby 섹션 */
+        margin-bottom: 10vh;
     }
     .aboutMe > div:nth-of-type(3) > h2 { /* Hobby 제목 */
         margin: 10vw 20vw 5vw 20vw;
         text-align: center;
         font-family: TImes;
-        font-size: 5vw;
+        font-size: 11vw;
         border-bottom: 0.1vh solid var(--borderTopBottom-color);
     }
-    .aboutMe > div:nth-of-type(4) > h2 { /* Skills 제목 */
-        margin: 10vw 20vw 5vw 20vw;
-        text-align: center;
-        font-family: TImes;
-        font-size: 5vw;
-        border-bottom: 0.1vh solid var(--borderTopBottom-color);
+    .aboutMe > div:nth-of-type(2) span { /* 자기소개 영역에서 이름 */
+        font-size: 6vw;
+        font-weight: bold;
+        color:rgb(53, 94, 94);
+    }
+    .aboutMe > div:nth-of-type(2) > span:nth-of-type(1) { /* 자기소개 영역에서 강조 */
+        font-size: 7.5vw;
+        font-weight: bold;
+        color:rgb(53, 94, 94);
+        text-shadow: 0.1vw 0.1vw 0.3vw rgb(33, 42, 56);
     }
     #myHobby {
-        margin: 0 5vw;
+        padding: 0 1vw 5vh 1vw;
     }
     #myHobby div{
         display: inline-grid;
         margin: 1vw;
         padding: 1vw;
-        font-size: 3vw;
+        font-size: 8vw;
         border: 0.1vw solid black;
-        border-radius: 2vw;
-        box-shadow: 1vw 1vw 0.5vw black;
+        border-radius: 3vw;
+        box-shadow: 2vw 2vw 0.5vw black;
     }
     #myHobby div:nth-child(1) {
         animation: hobbyScale 3s infinite 0s;
@@ -547,22 +569,34 @@
     #myHobby div:nth-child(7) {
         animation: hobbyScale 3s infinite 0s;
     }
+    #skillsSection {
+        margin-bottom: 10vh;
+    }
+    .aboutMe > div:nth-of-type(4) > h2 { /* Skills 제목 */
+        margin: 10vw 20vw 5vw 20vw;
+        text-align: center;
+        font-family: TImes;
+        font-size: 13vw;
+        border-bottom: 0.1vh solid var(--borderTopBottom-color);
+    }
     #skills {
-        width: 12.5vw;
-        margin: 5vh 10vw;
-        font-size: 2vw;
+        width: 100%;
+        margin: 3vh 8vw;
+        font-size: 8vw;
         font-family: Georgia;
+        font-weight: bold;
         transition: 3s ease-in-out;
+        text-shadow: 0.5vw 0.5vw 0.7vw white;
     }
     #fasFaBaby {
         color: darksalmon;
-        font-size: 2vw;
+        font-size: 5vw;
         animation: rotate 3s infinite;
         text-shadow: 0.1vw 0.1vw 0.1vw black;
     }
     #fasFaBurn {
         color: red;
-        font-size: 2vw;
+        font-size: 5vw;
         animation: burn 0.5s infinite;
     }
 
@@ -570,32 +604,36 @@
     .portfolio {
         background-color: cadetblue;
         box-shadow: inset -3vw -3vh 0.5vw var(--boxShade);
-        height: 100vh;
+        height: 106vh;
         margin-bottom: 20vh;
     }
     .portfolio > h1 {
         margin: 10vw;
         text-align: center;
         font-family: Times;
-        font-size: 10vw;
+        font-size: 18vw;
         border-bottom: 0.1vh solid var(--borderTopBottom-color);
     }
     .portfolio > a {
         text-decoration: none;
         color: lightyellow;
-        font-size: 5vw;
+        font-size: 8vw;
         text-align: center;
         transition: 0.5s ease-in-out;
     }
     .portfolio > a > h2 {
-        margin: 1vh 0;
+        width: 90%;
+        margin: 5vh auto;
+        border-radius: 5vw;
+        border: 1px solid black;
+        box-shadow: 1vw 1vw 0.2vw black;
     }
     .portfolio > a:hover {
         color: #222;
     }
     .portfolio > p {
         color: lightyellow;
-        font-size: 3vw;
+        font-size: 5vw;
         text-align: center;
     }
 
@@ -603,20 +641,21 @@
     .contactMe {
         background-color: rgba(129, 201, 202, 0.637);
         box-shadow: inset -3vw -3vh 0.5vw var(--boxShade);
-        height: 100vh;
+        height: 106vh;
         margin-bottom: 20vh;
     }
     .contactMe > h1 {
         margin: 10vw;
         text-align: center;
         font-family: Times;
-        font-size: 10vw;
+        font-size: 13vw;
         border-bottom: 0.1vh solid var(--borderTopBottom-color);
     }
     .contactMe > h2 {
-        margin: 0 22vw;
+        margin: 3vh auto;
+        width: 70%;
         text-align: center;
-        font-size: 8vw;
+        font-size: 10vw;
         border-radius: 3vw;
         border: 0.1vw solid rgba(255, 255, 255, 0.8);
         box-shadow: 1vw 1vw 0.5vw black;
@@ -628,7 +667,7 @@
     }
     .contactMe > p {
         text-align: center;
-        font-size: 5vw;
+        font-size: 7vw;
         font-weight: bold;
     }
     .contactMe > p:first-of-type {
@@ -650,14 +689,14 @@
         margin: 5vh 10vw 5vh 10vw;
         padding: 5vw;
         text-align: center;
-        font-size: 2vw;
+        font-size: 6vw;
         border-top: 0.1vh solid var(--borderTopBottom-color);
     }
     footer > p:nth-child(1) {
         font-weight: 900;
     }
     footer > p:nth-child(2) {
-        font-size: 1vw;
+        font-size: 3vw;
         padding: 1vh;
     }
     /* 푸터 영역 끝 */
@@ -671,9 +710,9 @@
     }
 
     @keyframes hobbyScale { /* 취미 탭에서 사용할 효과 */
-        from {transform: scale(1); box-shadow: 1vw 1vw 0.5vw black;}
+        from {transform: scale(1); box-shadow: 2.5vw 2.5vw 0.7vw black;}
         50% {transform: scale(0.8); box-shadow: 0.5vw 0.5vw 0.2vw black;}
-        to {transform: scale(1); box-shadow: 1vw 1vw 0.5vw black;}
+        to {transform: scale(1); box-shadow: 2.5vw 2.5vw 0.7vw black;}
     }
 
     @keyframes rotate { /* fas-fa-baby 아이콘 회전 효과 */

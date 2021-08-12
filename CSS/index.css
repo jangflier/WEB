@@ -365,12 +365,14 @@
 /* -------------------------------- */
 @media screen and (max-width: 1024px)
 {
+    html {
+        scroll-behavior: smooth;
+    }
     /* 공통된 영역 시작 */
     * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        scroll-behavior: smooth;
         overflow-x: hidden;
     }
 
@@ -515,16 +517,6 @@
         font-weight: 550;
         font-family: 'Song Myung', serif;
     }
-    #hobbySection { /* Hobby 섹션 */
-        margin-bottom: 10vh;
-    }
-    .aboutMe > div:nth-of-type(3) > h2 { /* Hobby 제목 */
-        margin: 10vw 20vw 5vw 20vw;
-        text-align: center;
-        font-family: TImes;
-        font-size: 11vw;
-        border-bottom: 0.1vh solid var(--borderTopBottom-color);
-    }
     .aboutMe > div:nth-of-type(2) span { /* 자기소개 영역에서 이름 */
         font-size: 6vw;
         font-weight: bold;
@@ -536,14 +528,24 @@
         color:rgb(53, 94, 94);
         text-shadow: 0.1vw 0.1vw 0.3vw rgb(33, 42, 56);
     }
+    #hobbySection { /* Hobby 섹션 */
+        margin-bottom: 10vh;
+    }
+    .aboutMe > div:nth-of-type(3) > h2 { /* Hobby 제목 */
+        margin: 10vw 20vw 5vw 20vw;
+        text-align: center;
+        font-family: TImes;
+        font-size: 11vw;
+        border-bottom: 0.1vh solid var(--borderTopBottom-color);
+    }   
     #myHobby {
         padding: 0 1vw 5vh 1vw;
     }
     #myHobby div{
         display: inline-grid;
-        margin: 1vw;
+        margin: 2vw;
         padding: 1vw;
-        font-size: 8vw;
+        font-size: 6vw;
         border: 0.1vw solid black;
         border-radius: 3vw;
         box-shadow: 2vw 2vw 0.5vw black;
